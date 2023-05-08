@@ -1,5 +1,5 @@
 {
-  "name": "coders-template",
+  "name": "todo-app-redux",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -8,7 +8,9 @@
     "build": "tsc && vite build",
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "test": "vite",
+    "test:dev": "vitest run"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.5",
