@@ -1,9 +1,19 @@
-import tasksReducer, { loadToDo, TasksStateStructure } from "./tasksSlice";
+import {
+  TasksStateStructure,
+  TasksStructure,
+  loadTasksActionCreator,
+  tasksReducer,
+} from "./tasksSlice";
 
 describe("Given a tasksSlice reducer", () => {
-  describe("When it receives a loadToDo action", () => {
-    test("Then it should update the tasks list in the state and not modify the original state", () => {
-      const newTasks = [
+  describe("When it receives an empty tasks list and a load action with two task", () => {
+    test("Then it should return a tasks list with two tasks", () => {
+      const currentEmptyTask: TasksStructure[] = [];
+      const emptyState: TasksStateStructure = {
+        tasks: currentEmptyTask,
+      };
+
+      const newTasks: TasksStructure[] = [
         {
           id: 1,
           name: "Task 1",
@@ -16,14 +26,16 @@ describe("Given a tasksSlice reducer", () => {
         },
       ];
 
-      const action = loadToDo(newTasks);
-      const state: TasksStateStructure = {
-        tasks: [],
+      const newExpectedState: TasksStateStructure = {
+        ...currentEmptyTask,
+        tasks: newTasks,
       };
 
-      const newState = tasksReducer(state, action);
+      const loadTaskAction = loadTasksActionCreator(newTasks);
 
-      expect(newState.tasks).toEqual(newTasks);
+      const expected = tasksReducer(emptyState, loadTaskAction);
+
+      expect(expected).toStrictEqual(newExpectedState);
     });
   });
 });
