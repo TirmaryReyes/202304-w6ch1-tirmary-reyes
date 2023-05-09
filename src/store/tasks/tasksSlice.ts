@@ -15,18 +15,16 @@ const initialState: TasksStateStructure = {
 };
 
 export const tasksSlice = createSlice({
-  name: "toDo",
+  name: "tasks",
   initialState: initialState,
   reducers: {
-    loadToDo: (
-      state: TasksStateStructure,
-      action: PayloadAction<TasksStructure[]>
-    ) => {
-      state.tasks = action.payload;
-    },
+    loadTasks: (currentTasks, action: PayloadAction<TasksStructure[]>) => ({
+      ...currentTasks,
+      tasks: [...action.payload],
+    }),
   },
 });
 
-export const { loadToDo } = tasksSlice.actions;
+export const { loadTasks: loadTasksActionCreator } = tasksSlice.actions;
 
-export default tasksSlice.reducer;
+export const tasksReducer = tasksSlice.reducer;
