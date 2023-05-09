@@ -1,10 +1,5 @@
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
-
-export interface TasksStructure {
-  id: number;
-  name: string;
-  isDone: boolean;
-}
+import { TasksStructure } from "../../types";
 
 export interface TasksStateStructure {
   tasks: TasksStructure[];
@@ -28,3 +23,4 @@ export const tasksSlice = createSlice({
 export const { loadTasks: loadTasksActionCreator } = tasksSlice.actions;
 
 export const tasksReducer = tasksSlice.reducer;
+export default tasksSlice;
