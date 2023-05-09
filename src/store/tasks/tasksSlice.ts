@@ -23,3 +23,4 @@ export const tasksSlice = createSlice({
 export const { loadTasks: loadTasksActionCreator } = tasksSlice.actions;
 
 export const tasksReducer = tasksSlice.reducer;
+export default tasksSlice;
