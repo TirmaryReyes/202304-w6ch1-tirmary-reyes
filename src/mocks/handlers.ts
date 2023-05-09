@@ -6,6 +6,6 @@ const apiURL = import.meta.env.VITE_API_URL;
 
 export const handlers = [
   rest.get(`${apiURL}tasks`, (_request, response, context) => {
-    return response(context.status(200), context.json([tasksMocks]));
+    return response(context.status(200), context.json(tasksMocks));
   }),
 ];

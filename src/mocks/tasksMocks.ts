@@ -6,7 +6,6 @@ const tasksMocks: TasksStructure[] = [
     name: "do inventory",
     isDone: true,
   },
-
   {
     id: 32,
     name: "set a schedule",
