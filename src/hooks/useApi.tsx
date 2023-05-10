@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useCallback } from "react";
-import { TasksStructure } from "../types";
+import { TasksStructure } from "../store/types";
 
 interface UseApiStructure {
   getTasks: () => Promise<TasksStructure[]>;
