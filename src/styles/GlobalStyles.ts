@@ -9,11 +9,13 @@ const GlobalStyle = createGlobalStyle`
 }
 
 html {
-  font-family: "Roboto" ;
+  font-family: monospace;
+  
 }
 
 body {
   margin: 0;
+  padding: 10%;
 }
 
 h1,
@@ -36,6 +38,10 @@ ul {
   list-style: none;
   padding-left: 0;
   margin: 0;
+}
+
+il{
+  list-style: none;
 }
 
 button {
