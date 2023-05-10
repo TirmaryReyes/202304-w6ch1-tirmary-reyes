@@ -1,7 +1,7 @@
 import { renderHook } from "@testing-library/react";
 import useApi from "./useApi";
-import { TasksStructure } from "../types";
 import tasksMocks from "../mocks/tasksMocks";
+import { TasksStructure } from "../store/types";
 
 describe("Given the getTasks function", () => {
   describe("When it is invoked", () => {
