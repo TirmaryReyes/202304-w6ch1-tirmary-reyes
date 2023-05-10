@@ -1,4 +1,4 @@
-import { TasksStructure } from "../types";
+import { TasksStructure } from "../store/types";
 
 const tasksMocks: TasksStructure[] = [
   {

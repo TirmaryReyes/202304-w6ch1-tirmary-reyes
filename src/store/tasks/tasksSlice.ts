@@ -1,5 +1,5 @@
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
-import { TasksStructure } from "../../types";
+import { TasksStructure } from "../types";
 
 export interface TasksStateStructure {
   tasks: TasksStructure[];
