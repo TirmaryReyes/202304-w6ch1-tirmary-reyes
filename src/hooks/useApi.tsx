@@ -9,7 +9,7 @@ const apiURL = import.meta.env.VITE_API_URL;
 
 const useApi = (): UseApiStructure => {
   const getTasks = useCallback(async () => {
-    const { data: tasks } = await axios.get(`${apiURL}tasks`);
+    const { data: tasks } = await axios.get(`${apiURL}data`);
     return tasks;
   }, []);
 
