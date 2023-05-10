@@ -34,9 +34,9 @@ describe("Given a tasksSlice reducer", () => {
 
       const loadTaskAction = loadTasksActionCreator(newTasks);
 
-      const expected = tasksReducer(emptyState, loadTaskAction);
+      const expectedValue = tasksReducer(emptyState, loadTaskAction);
 
-      expect(expected).toStrictEqual(newExpectedState);
+      expect(expectedValue).toStrictEqual(newExpectedState);
     });
   });
 });
