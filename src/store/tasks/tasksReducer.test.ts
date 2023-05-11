@@ -5,8 +5,6 @@ import {
   tasksReducer,
 } from "./tasksSlice";
 
-import { TasksStructure } from "../types";
-
 describe("Given a tasksSlice reducer", () => {
   describe("When it receives an empty tasks list and a load action with two task", () => {
     test("Then it should return a tasks list with two tasks", () => {
